@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary-emerald: #059669;
+  --surface-dark: #020617;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-emerald-primary: var(--primary-emerald);
+  --color-surface-dark: var(--surface-dark);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617;
+    --foreground: #f8fafc;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans);
+  @apply bg-slate-50 dark:bg-[#020617] antialiased;
+}
+
+@layer utilities {
+  /* Polished Dark Glass */
+  .glass {
+    @apply backdrop-blur-xl bg-white/40 dark:bg-slate-950/60 border border-white/20 dark:border-emerald-500/10 shadow-xl;
+  }
+  
+  /* Tinted Emerald Glass */
+  .glass-emerald {
+    @apply backdrop-blur-xl bg-emerald-50/30 dark:bg-emerald-900/20 border border-emerald-200/30 dark:border-emerald-500/20 shadow-lg;
+  }
+  
+  /* Polished Gemstone (Primary Buttons/Accents) */
+  .glossy-emerald {
+    @apply bg-gradient-to-br from-emerald-400 to-emerald-600 shadow-lg shadow-emerald-500/30 border border-emerald-300/20 text-white hover:brightness-110 active:scale-95 transition-all duration-200;
+  }
+
+  /* Premium Card Gradient */
+  .premium-card {
+    background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+    @apply border border-emerald-500/20 shadow-2xl;
+  }
+
+  /* Micro-Typography Utility */
+  .micro-label {
+    @apply text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 dark:text-emerald-500/70;
+  }
+}
+
+/* Sleek Glassmorphic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300/50 dark:bg-emerald-500/20 rounded-full transition-colors hover:bg-emerald-500/40;
+}
