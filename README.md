@@ -6,6 +6,20 @@
 
 A web interface for database querying and visualization using Next.js 15 and Drizzle ORM.
 
+## Live Demo
+
+Live Deployment: [ai-data-analyst-agent-fawn.vercel.app](https://ai-data-analyst-agent-fawn.vercel.app/)
+
+![Live Demo](docs/media/demo.gif)
+
+[Watch full MP4 walkthrough](docs/media/demo.mp4)
+
+## Screenshots
+
+| Configuration Modal | Workspace View |
+| :---: | :---: |
+| ![Configuration Modal](docs/media/screenshot-desktop.png) | ![Workspace View](docs/media/screenshot-interactive.png) |
+
 ## Tech Stack
 
 - **Frontend**: Next.js 15 (App Router), React
